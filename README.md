@@ -59,7 +59,7 @@ $ BOOST_INCLUDE_DIRS=/path/to/boost/include make all
 
 The makefile will not work on Windows with MSVC. Not tested with neither CygWin nor MinGw. Execute the following instead:
 ```
-python setup.py install boost-location=<path_to_your_boost>
+python setup.py install --boost-location=D:/lib/vcpkg/installed/x64-windows/include
 ```
 
 Testing

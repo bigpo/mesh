@@ -21,9 +21,9 @@ The ``Mesh`` processing libraries support several of our projects such as
 Requirements
 ------------
 
-You first need to install the `Boost <http://www.boost.org>`_
-libraries.  You can compile your own local version or simply do on
-Linux
+You first need to install the `Boost <http://www.boost.org>`_ libraries.
+You can compile your own local version. This is a must for Windows/MSCV. On Linux you can simply install it via:
+
 
 ```
 $ sudo apt-get install libboost-dev
@@ -45,11 +45,21 @@ $ python3 -m venv --copies my_venv
 $ source my_venv/bin/activate
 ```
 
-You should then compile and install the ``psbody-mesh`` package easily
-using the Makefile:
+
+#### Linux/MacOS
+You should then compile and install the ``psbody-mesh`` package using the Makefile.
+If you are using the system-wide ``Boost`` libraries:
+
 
 ```
 $ BOOST_INCLUDE_DIRS=/path/to/boost/include make all
+```
+
+#### Windows 
+
+The makefile will not work on Windows with MSVC. Not tested with neither CygWin nor MinGw. Execute the following instead:
+```
+python setup.py install boost-location=<path_to_your_boost>
 ```
 
 Testing
